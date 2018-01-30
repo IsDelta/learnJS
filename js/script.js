@@ -1,3 +1,4 @@
+
 var cycle1 = function() {
     for (var i = 2; i <= 10; i++){
         if  (i % 2 == 0){
@@ -30,3 +31,29 @@ cycle4 = function() {
         }   
     }
 }
+// END OF CYCLES BRANCH
+var switch1 = function(){
+    var browser = 'IE';
+    if (browser == 'IE'){
+        alert ( 'О, да у вас IE!' );
+    } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' ||browser == 'Opera') {
+        alert( 'Да, и эти браузеры мы поддерживаем' );
+    } else alert( 'Мы надеемся, что и в вашем браузере все ок!' );
+},
+switch2 = function() {
+    switch (+prompt('a?','')) {
+        case 0:
+        alert(0);
+            break;
+        case 1:
+        alert(1);
+            break;
+        case 2:
+        case 3:
+        alert('2,3');
+            break;
+        default:
+            break;
+    }
+}
+// END OF SWITCH BRANCH
