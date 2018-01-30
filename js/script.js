@@ -74,5 +74,37 @@ var checkAge = function (age) {
             n--;
         }
         return x;
-    }
+    };
 // END OF FUNCTION TASKS
+function sumTo(n){
+    var rez=0;
+    for(var i = 1; i <= n; i++){
+         rez+=i;
+    }
+    return rez;
+}
+function sumTo2(n){
+    for (var i = 1; 1 < n; i++){
+        return n + sumTo2(n-1);
+    }
+    return n;
+}
+function sumTo3(n){
+    return n*(n+1)/2
+}
+function factorial(n){
+    for (var i = 1; i < n; i++){
+        return n * factorial(n-1); 
+    }
+    return n;
+}
+function fib(n){
+    var a = 1,  b = 0, c = 0;
+    for (var i = 1 ; i < n ; i++){
+        b = c;
+        c = a;
+        a = a + b;
+    }
+    return a;
+}
+// END OF RECURSION TASKS
