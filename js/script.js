@@ -118,3 +118,22 @@ function fib(n) {
     return a;
 }
 // END OF RECURSION TASKS
+function sum() {
+    var a = +prompt('First number', ''),
+        b = +prompt('Second number', '');
+    return +(a + b).toFixed(6);
+}
+
+function getDecimal(a) {
+    a = Math.abs(a);
+    return (a * 10e5 - Math.floor(a) * 10e5) / 10e5
+}
+
+function fibBinet(n) {
+    return Math.pow((1 + Math.sqrt(5)) / 2, n) / Math.sqrt(5);
+}
+
+function rand(min, max) {
+    return Math.floor(min + Math.random() * (max + 1 - min));
+}
+// END OF NUMBER TASKS
