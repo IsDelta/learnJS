@@ -137,3 +137,23 @@ function rand(min, max) {
     return Math.floor(min + Math.random() * (max + 1 - min));
 }
 // END OF NUMBER TASKS
+function ucFirst(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function checkSpam(str) {
+    var strToLow = str.toLowerCase();
+    return ~strToLow.indexOf('viagra') != 0 || ~strToLow.indexOf('xxx') != 0
+
+}
+
+function truncate(str, maxlength) {
+    if (str.length > maxlength) {
+        str = str.slice(0, maxlength - 3) + '...'
+    }
+    return str;
+}
+function extractCurrencyValue(str) {
+
+}
+// END OF STRING TASKS
