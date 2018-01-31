@@ -64,43 +64,53 @@ var checkAge = function (age) {
         return (age > 18) || confirm('Родители разрешили?');
 
     },
-    min = function(a,b) {
-       return a > b ? b : a;
+    min = function (a, b) {
+        return a > b ? b : a;
     }
-    pow = function(x,n) {
-        var a = x;
-        while(n != 1){
-            x*=a;
-            n--;
-        }
-        return x;
-    };
+
+function pow(x, n) {
+    if (n < 0 || n != ~~n || (x == n && x == 0)) return NaN;
+
+    if (n == 0) return 1;
+    var a = x;
+    while (n > 1) {
+        x *= a;
+        n--;
+    }
+    return x;
+};
 // END OF FUNCTION TASKS
-function sumTo(n){
-    var rez=0;
-    for(var i = 1; i <= n; i++){
-         rez+=i;
+function sumTo(n) {
+    var rez = 0;
+    for (var i = 1; i <= n; i++) {
+        rez += i;
     }
     return rez;
 }
-function sumTo2(n){
-    for (var i = 1; 1 < n; i++){
-        return n + sumTo2(n-1);
+
+function sumTo2(n) {
+    for (var i = 1; 1 < n; i++) {
+        return n + sumTo2(n - 1);
     }
     return n;
 }
-function sumTo3(n){
-    return n*(n+1)/2
+
+function sumTo3(n) {
+    return n * (n + 1) / 2
 }
-function factorial(n){
-    for (var i = 1; i < n; i++){
-        return n * factorial(n-1); 
+
+function factorial(n) {
+    for (var i = 1; i < n; i++) {
+        return n * factorial(n - 1);
     }
     return n;
 }
-function fib(n){
-    var a = 1,  b = 0, c = 0;
-    for (var i = 1 ; i < n ; i++){
+
+function fib(n) {
+    var a = 1,
+        b = 0,
+        c = 0;
+    for (var i = 1; i < n; i++) {
         b = c;
         c = a;
         a = a + b;
