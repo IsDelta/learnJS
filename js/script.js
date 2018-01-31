@@ -153,7 +153,56 @@ function truncate(str, maxlength) {
     }
     return str;
 }
+
 function extractCurrencyValue(str) {
 
 }
 // END OF STRING TASKS
+function objects() {
+    var user = {};
+    user.name = "Vasya";
+    user.surname = "Petrov";
+    user.name = "Sergey";
+    delete user.name;
+    return user;
+}
+
+function isEmpty(obj) {
+    var counter = 0
+    for (key in obj) {
+        counter++
+    }
+    return !counter;
+}
+
+function sumInObj(obj) {
+    var sum = 0;
+    for (key in obj) {
+        sum += obj[key];
+    }
+    return sum;
+}
+
+function maxSalary(obj) {
+    var maxValue = 0,
+        maxValueName = "No workers";
+    for (key in obj) {
+        if (obj[key] > maxValue) {
+            maxValue = obj[key];
+            maxValueName = key;
+        }
+    }
+    return maxValueName;
+}
+
+function multiplyNumeric(obj) {
+    for (key in obj) {
+        if (isNumeric(obj[key])) obj[key] *= 2;
+    }
+    return obj;
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n)
+    }
+}
+// END OF OBJECT TASKS
