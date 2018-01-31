@@ -206,3 +206,62 @@ function multiplyNumeric(obj) {
     }
 }
 // END OF OBJECT TASKS
+function lastArrayElemet(arr) {
+    return arr[arr.length - 1];
+}
+
+function addTextInArray(arr) {
+    arr.push('Computer')
+}
+
+function arrayTask() {
+    var styles = ['Jazz', 'Blues'];
+    styles.push('Rock\'n\'Roll');
+    styles[styles.length - 2] = 'Classic';
+    alert(styles.shift());
+    styles.unshift('Rap', 'Ragge');
+    return (styles);
+}
+
+function randomArrayElement(arr) {
+    return arr[rand(0, arr.length - 1)];
+
+    function rand(min, max) {
+        return min + Math.floor(Math.random() * (max + 1 - min));
+    }
+}
+
+function sumOfArrayElements() {
+    var arr = [],
+        i = 0,
+        temp
+    rez = 0;
+    while (true) {
+        if ((temp = prompt('Input number', '')) != null) {
+            arr[i] = +temp;
+            i++
+        } else break;
+    }
+    for (i = 0; i < arr.length; i++) {
+        rez += arr[i];
+    }
+    return rez;
+}
+
+function find(arr, value) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === value) return i
+    }
+    return -1;
+}
+
+function filterRange(arr, a, b) {
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= a && arr[i] <= b) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+// END OF ARRAY TASKS
