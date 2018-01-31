@@ -264,4 +264,13 @@ function filterRange(arr, a, b) {
     }
     return newArr;
 }
+
+function addClass(obj, cls) {
+    var arr = obj.className.split(' ');
+    if (arr.indexOf(cls) === -1) {
+        arr.push(cls);
+        obj.className = arr.join(' ');
+    }
+    return obj.className;
+}
 // END OF ARRAY TASKS
