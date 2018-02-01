@@ -273,4 +273,57 @@ function addClass(obj, cls) {
     }
     return obj.className;
 }
+// Missed tasks
+function randomSort(arr) {
+    function compare(a, b) {
+        return Math.random() - 0.5;
+    }
+    return arr.sort(compare)
+}
+
+function sortAge(arr) {
+    function compare(a, b) {
+        return a.age - b.age;
+    }
+    return arr.sort(compare);
+}
+
+function printList(list) {
+    tmp = list;
+    while (tmp) {
+        console.log(tmp.value);
+        tmp = tmp.next;
+    }
+}
+
+function aclean(arr) {
+    var tempArr = [];
+    var indexArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        tempArr[i] = arr[i].toLowerCase().split('').sort().join('');
+    }
+    for (var i = 0; i < tempArr.length; i++) {
+        var index = tempArr.indexOf(tempArr[i])
+        if (indexArr.indexOf(index) == -1) {
+            indexArr.push(index)
+        }
+
+    }
+    tempArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (indexArr.indexOf(i) != -1) {
+            tempArr.push(arr[i]);
+        }
+    }
+    return tempArr;
+}
+
+function unique(arr) {
+    var obj = {}
+    for (var i = 0; i < arr.length; i++) {
+        var str = arr[i];
+        obj[str] = 1;
+    }
+    return Object.keys(obj);
+}
 // END OF ARRAY TASKS
